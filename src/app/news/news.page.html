@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>Nelx News</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
-  <ion-card *ngFor="let article of data?.articles" >
+  <ion-card *ngFor="let article of data?.articles" (click)="onGoToNewsSinglePage(article)">
     <img [src]=article.urlToImage />
     <ion-card-content>
       <ion-card-title>

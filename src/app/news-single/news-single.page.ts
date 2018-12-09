@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NewsService } from '../news.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-news-single',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news-single.page.scss'],
 })
 export class NewsSinglePage implements OnInit {
-
-  constructor() { }
+  article;
+  constructor( private newsService: NewsService, private router: Router) { }
 
   ngOnInit() {
+    this.article = this.newsService.currentArticle;
+    console.log(this.newsService.currentArticle);
   }
-
+  back(){
+    this.router.navigateByUrl('/news');
+  }
 }
