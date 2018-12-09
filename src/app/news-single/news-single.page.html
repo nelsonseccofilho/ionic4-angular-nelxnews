@@ -1,7 +1,18 @@
 <ion-header>
   <ion-toolbar color="dark">
-    <button (click)="back()">back</button>
-    <ion-title>{{article?.title}}</ion-title>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-buttons (click)="back()">
+            <ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon>
+          </ion-buttons>
+        </ion-col>
+        <ion-col>
+          <ion-title>{{article?.title}}</ion-title>
+        </ion-col>
+        <ion-col></ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-toolbar>
 </ion-header>
 
@@ -12,10 +23,11 @@
       <ion-card-title>
         {{article?.title}}
       </ion-card-title>
+      <hr>
       <p>
         {{article?.content}}
       </p>
-      <span>{{article?.author}} - {{article?.publishedAt}}</span>
+      <p>{{article?.author}} - {{article?.publishedAt}}</p>
       <span>fonte: {{article?.url}}</span>
     </ion-card-content>
   </ion-card>
