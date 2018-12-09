@@ -6,18 +6,18 @@
 
 <ion-content>
 
-  <ion-card>
-    <img src="https://ionicframework.com/dist/preview-app/www/assets/img/nin-live.png" />
+  <ion-card *ngFor="let article of data?.articles" >
+    <img [src]=article.urlToImage />
     <ion-card-content>
       <ion-card-title>
-        Nine Inch Nails Live
+        {{article.title}}
       </ion-card-title>
       <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
+        {{article.description}}
       </p>
     </ion-card-content>
 
+    <!-- 
     <ion-row class="row">
       <ion-col class="col">
         <button ion-button clear padding>
@@ -37,7 +37,8 @@
           Share
         </button>
       </ion-col>
-    </ion-row>
+    </ion-row> 
+    -->
   </ion-card>
 
 </ion-content>
