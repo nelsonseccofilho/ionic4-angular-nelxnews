@@ -8,7 +8,7 @@
           </ion-buttons>
         </ion-col>
         <ion-col>
-          <ion-title>{{article?.title}}</ion-title>
+          <ion-title>Open Article</ion-title>
         </ion-col>
         <ion-col></ion-col>
       </ion-row>
@@ -28,7 +28,7 @@
         {{article?.content}}
       </p>
       <p>{{article?.author}} - {{article?.publishedAt}}</p>
-      <span>fonte: {{article?.url}}</span>
+      <span>Open in browser: <a [href]=article?.url target="_blank" rel="noopener noreferrer">{{article?.url}}</a></span>
     </ion-card-content>
   </ion-card>
 </ion-content>

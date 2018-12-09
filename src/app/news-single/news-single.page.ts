@@ -16,6 +16,6 @@ export class NewsSinglePage implements OnInit {
     console.log(this.newsService.currentArticle);
   }
   back(){
-    this.router.navigateByUrl('/news');
+    this.router.navigateByUrl('/');
   }
 }
